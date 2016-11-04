@@ -23,7 +23,7 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(rootReducer)}>
     <Router history={hashHistory}>
       <Route path="/" component={App}>
-      <IndexRoute component={RequireAuth(UserDashboard)} />
+      <IndexRoute component={LandingPage} />
         <Route path="/user/:id/dashboard" component={RequireAuth(UserDashboard)} />
         <Route path="/user/signin" component={SignIn} />
         <Route path="/user/signup" component={SignUp} />
