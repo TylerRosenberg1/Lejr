@@ -8,14 +8,14 @@ class NavBar extends Component {
     if (localStorage.getItem("token")) {
       return (
         <div>
-          <Link to={"/user/" + localStorage.getItem("user") + "/dashboard"}>
+          <Link to={"/#/user/" + localStorage.getItem("user") + "/dashboard"}>
             <div className="brand">
               <h2>LEJR</h2>
             </div>
           </Link>
           <div className="nav-items">
             <ul>
-              <Link to={"/user/" + localStorage.getItem("user") + "/dashboard"}>
+              <Link to={"/#/user/" + localStorage.getItem("user") + "/dashboard"}>
                 <li>
                   Dashboard
                 </li>
@@ -39,12 +39,12 @@ class NavBar extends Component {
           </Link>
           <div className="nav-items">
             <ul>
-              <Link to={"/user/signin"}>
+              <Link to={"/#/user/signin"}>
                 <li>
                   Sign In
                 </li>
               </Link>
-              <Link to={"/user/signup"}>
+              <Link to={"/#/user/signup"}>
                 <li>
                   Sign Up
                 </li>
