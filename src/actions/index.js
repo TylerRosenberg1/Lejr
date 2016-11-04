@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { browserHistory } from 'react-router';
+import { hashHistory } from 'react-router';
 import { CREATE_BET } from './types';
 import { FETCH_BETS } from './types';
 import { COMPLETE_BET } from './types';
@@ -15,7 +15,7 @@ export function userSignup({username, password}) {
       if (!response.data.error) {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", response.data.user._id);
-        browserHistory.push(`/user/${response.data.user._id}/dashboard`);
+        hashHistory.push(`/user/${response.data.user._id}/dashboard`);
       }
     }).catch(function(error) {
       localStorage.clear();
@@ -30,7 +30,7 @@ export function userSignin({username, password}) {
       if (!response.data.error) {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", response.data.user._id);
-        browserHistory.push(`/user/${response.data.user._id}/dashboard`);
+        hashHistory.push(`/user/${response.data.user._id}/dashboard`);
       }
     }).catch(function(error) {
       localStorage.clear();
