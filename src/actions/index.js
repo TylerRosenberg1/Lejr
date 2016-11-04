@@ -15,7 +15,7 @@ export function userSignup({username, password}) {
       if (!response.data.error) {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", response.data.user._id);
-        browserHistory.push(`/#/user/${response.data.user._id}/dashboard`);
+        browserHistory.push(`/user/${response.data.user._id}/dashboard`);
       }
     }).catch(function(error) {
       localStorage.clear();
@@ -30,7 +30,7 @@ export function userSignin({username, password}) {
       if (!response.data.error) {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("user", response.data.user._id);
-        browserHistory.push(`/#/user/${response.data.user._id}/dashboard`);
+        browserHistory.push(`/user/${response.data.user._id}/dashboard`);
       }
     }).catch(function(error) {
       localStorage.clear();
