@@ -9,7 +9,7 @@ function RequireAuth(ComposedComponent) {
 
     componentWillMount() {
       if (!localStorage.getItem("token")) {
-        this.context.router.push("/");
+        this.context.router.push("/welcome");
       }
     }
 
